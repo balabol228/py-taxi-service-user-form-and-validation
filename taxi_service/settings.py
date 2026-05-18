@@ -145,5 +145,11 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+try:
+    import crispy_bootstrap4
+    INSTALLED_APPS.append("crispy_bootstrap4")
+except ImportError:
+    pass
+
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
